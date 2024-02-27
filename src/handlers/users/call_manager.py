@@ -87,8 +87,8 @@ async def dialogue(message: types.Message):
 
     elif BUFFER[ID_MANAGER] is None and user_id == ID_MANAGER:
 
-        text: str = f"Консультант не может заговорить первым." \
-                    f"К нму должны обратиться."
+        text: str = f"Консультант не может заговорить первым. " \
+                    f"К нему должны сначала обратиться."
         await message.answer(text=text)
 
     else:
