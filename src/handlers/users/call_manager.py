@@ -19,7 +19,7 @@ async def call_manager(message: types.Message):
         args_for_send_message = {
             'chat_id': ID_MANAGER,
             'text': f"Пользователь {name_user} "
-                    f"просит провести консультацию",
+                    f"просит провести консультацию.",
         }
         await bot.send_message(**args_for_send_message)
 
@@ -30,7 +30,7 @@ async def call_manager(message: types.Message):
         args_for_send_message = {
             'chat_id': ID_MANAGER,
             'text': f"Пользователь {name_user} "
-                    f"просит обратиь на себя внимание",
+                    f"просит обратить на него внимание.",
         }
         await bot.send_message(**args_for_send_message)
 
