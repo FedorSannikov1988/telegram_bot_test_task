@@ -49,10 +49,8 @@ async def entering_description_cargo(message: types.Message,
         await state.update_data({'cargo_description': cargo_description})
         await state.set_state(CreateAnInvoiceForCargo.wait_cargo_weight)
 
-        text: str = "Введите вес груза в киллограммах " \
-                    "в формате целая часть числа точка " \
-                    "(именно точка) дробная часть." \
-                    "Пример: 0.5 или 1.0"
+        text: str = "Введите вес груза в киллограммах. " \
+                    "Пример: 0.5 или 2"
 
     else:
         text: str = "Введите описание груза " \
@@ -78,7 +76,8 @@ async def entering_cargo_weight(message: types.Message,
 
             text: str = "Введите габариты груза в сантиметрах " \
                         "в следующем формате X*Y*Z. где X, Y, Z " \
-                        "- можно ввести как десятичные числа." \
+                        "- можно ввести как десятичные числа " \
+                        "так и целыми." \
                         "Пример: 0.5*0.6*0.7"
         else:
 
